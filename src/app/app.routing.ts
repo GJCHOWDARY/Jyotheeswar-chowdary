@@ -8,6 +8,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
+import { ProjectComponent } from './project/project.component';
+
 
 const routes: Routes =[
     { path: 'resume',             component: HomeComponent },
@@ -15,6 +17,7 @@ const routes: Routes =[
     { path: 'contact',           component: SignupComponent },
     { path: 'home',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
+    { path: 'project',      component: ProjectComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

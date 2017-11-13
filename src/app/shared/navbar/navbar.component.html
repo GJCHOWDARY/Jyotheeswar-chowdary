@@ -33,12 +33,20 @@
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Pojects" data-placement="bottom" [routerLink]="['/project']">
+                        <!-- <i class="fa fa-github"></i> -->
+                        <!-- <p class="d-lg-none">CONTACT</p> -->
+                        POJECTS
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
                     <a class="nav-link" rel="tooltip" title="Contact Me" data-placement="bottom" [routerLink]="['/contact']">
                         <!-- <i class="fa fa-github"></i> -->
                         <!-- <p class="d-lg-none">CONTACT</p> -->
                         CONTACT
                     </a>
                 </li>
+
                 <!-- <li>
                   <div class="card card-profile card-plain"style="width:60%">
                 <div class="card-avatar">
