@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-landing',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class LandingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+  constructor( private http: HttpClient ) { }
+user= {};
+  ngOnInit() {
+this.http.get('https://shopaye.com/api/spaye_product_categories').subscribe(data => {this.user=data;
+console.log(data) })
+  }
 
 }
