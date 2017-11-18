@@ -10,7 +10,8 @@ import { HttpClient } from '@angular/common/http';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    providers:[HttpClient]
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit {
 
         }
         //http request
-        this.http.get('https://api.github.com/users/gjchowdary').subscribe(data => {
+        this.http.get('https://api.github.com/users/gjchowdary').subscribe((data :Response) => {
         const user=data;
       console.log(data);
     },
@@ -58,19 +59,19 @@ export class AppComponent implements OnInit {
         console.log("Error occured.")
       });
       //post method
-      const req = this.http.post('http://jsonplaceholder.typicode.com/posts', {
-      title: 'foo',
-      body: 'bar',
-      userId: 20
-    })
-      .subscribe(
-        res => {
-          console.log(res);
-        },
-        err => {
-          console.log("Error occured");
-        }
-      );
+    //   const req = this.http.post('http://jsonplaceholder.typicode.com/posts', {
+    //   title: 'foo',
+    //   body: 'bar',
+    //   userId: 20
+    // })
+    //   .subscribe(
+    //     res => {
+    //       console.log(res);
+    //     },
+    //     err => {
+    //       console.log("Error occured");
+    //     }
+    //   );
       //end
 
     }

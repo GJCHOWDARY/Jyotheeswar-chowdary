@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class LandingComponent implements OnInit {
+  hi='welcome';
   constructor( private http: HttpClient ) { }
 user= {};
   ngOnInit() {

@@ -5,8 +5,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFirestore } from 'angularfire2/firestore'
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
