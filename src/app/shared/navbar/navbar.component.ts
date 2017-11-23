@@ -1,22 +1,31 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { AuthService } from  '../../users/auth.service';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss']
+    styleUrls: ['./navbar.component.scss'],
+    providers:[AuthService]
 })
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(public location: Location, private element : ElementRef) {
+    constructor(public location: Location, private element : ElementRef,private authService:AuthService) {
         this.sidebarVisible = false;
     }
-
     ngOnInit() {
+      //this.isAuth();
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+    }
+
+    isAuth(){
+      return this.authService.isAuthenticated();
+    }
+    onLogout(){
+      return this.authService.isLogout();
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;

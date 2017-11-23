@@ -1,5 +1,5 @@
 {
-  "name": "Jyotheeswar Chowdary",
+  "name": "Jyotheeswar-Chowdary",
   "version": "0.0.3",
   "scripts": {
     "ng": "ng",
@@ -10,12 +10,14 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "@angular/animations": "4.3.1",
+    "@angular-devkit/schematics": "0.0.34",
+    "@angular/animations": "^4.4.6",
     "@angular/common": "4.3.1",
     "@angular/compiler": "4.3.1",
     "@angular/core": "4.3.1",
     "@angular/forms": "4.3.1",
     "@angular/http": "4.3.1",
+    "@angular/material": "^5.0.0-rc.1",
     "@angular/platform-browser": "4.3.1",
     "@angular/platform-browser-dynamic": "4.3.1",
     "@angular/router": "4.3.1",
@@ -23,6 +25,7 @@
     "angular-in-memory-web-api": "^0.5.1",
     "bootstrap": "4.0.0-beta",
     "core-js": "^2.4.1",
+    "firebase": "^4.6.2",
     "jquery": "3.2.1",
     "jw-bootstrap-switch-ng2": "1.0.3",
     "ng2-nouislider": "1.6.1",
@@ -50,5 +53,11 @@
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
     "typescript": "2.3.3"
-  }
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "chowdary"
 }

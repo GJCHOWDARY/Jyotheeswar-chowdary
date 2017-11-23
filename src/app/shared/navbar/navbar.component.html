@@ -46,7 +46,27 @@
                         CONTACT
                     </a>
                 </li>
-
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="login" data-placement="bottom" [routerLink]="['/login']">
+                        <!-- <i class="fa fa-github"></i> -->
+                        <!-- <p class="d-lg-none">CONTACT</p> -->
+                        SIGIN IN
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isAuth()" >
+                    <a class="nav-link" rel="tooltip" title="logout" data-placement="bottom" (click)="onLogout()"  >
+                        <!-- <i class="fa fa-github"></i> -->
+                        <!-- <p class="d-lg-none">CONTACT</p> -->
+                        LOGOUT
+                    </a>
+                </li>
+                <li class="nav-item"  *ngIf="isAuth()" >
+                    <a class="nav-link" rel="tooltip" title="login" data-placement="bottom" [routerLink]="['/profile']" >
+                        <!-- <i class="fa fa-github"></i> -->
+                        <!-- <p class="d-lg-none">CONTACT</p> -->
+                        PROFILE
+                    </a>
+                </li>
                 <!-- <li>
                   <div class="card card-profile card-plain"style="width:60%">
                 <div class="card-avatar">
