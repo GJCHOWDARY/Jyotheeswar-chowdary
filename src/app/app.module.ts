@@ -9,7 +9,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
-import { ProfileComponent } from './profile/profile.component';
+import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -22,21 +22,23 @@ import { ResultComponent } from './result/result.component';
 import { UsersComponent } from './users/users.component';
 import { SignupComponent } from './users/signup.component';
 import { AuthService } from  './users/auth.service';
-
+import { ProfileComponent } from './profile/profile.component';
+import { AuthGaurd } from './users/auth.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     LandingComponent,
-    ProfileComponent,
+    AboutComponent,
     NavbarComponent,
     FooterComponent,
     ProjectComponent,
     ResultComponent,
     //DealsComponent,
     UsersComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent
     ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { AuthService } from  './users/auth.service';
     HomeModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,AuthGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
