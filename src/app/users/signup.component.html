@@ -21,7 +21,7 @@
                             </div> -->
                             <form class="register-form" [formGroup]="myForm" (ngSubmit)="onSignup()">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" formControlName="email" type="email" id="email" #emai placeholder="Email">
+                                <input type="text" class="form-control" formControlName="email" type="email" id="email" #email placeholder="Email">
                                 <span *ngIf="!email && email != null && email['noEmail']">Invalid mail address</span>
 
                                 <label for="password">Password</label>
