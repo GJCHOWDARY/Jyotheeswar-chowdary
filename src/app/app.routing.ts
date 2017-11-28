@@ -14,6 +14,7 @@ import { UsersComponent } from './users/users.component';
 import { SignupComponent } from './users/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGaurd } from './users/auth.guard';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes =[
     { path: 'resume',             component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes =[
     { path: 'result',      component: ResultComponent },
     { path: 'login',      component: UsersComponent },
     { path: 'siginup',      component: SignupComponent },
+    { path: 'charts',      component: ChartsComponent },
     { path: 'profile',      component: ProfileComponent, canActivate:[AuthGaurd] },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

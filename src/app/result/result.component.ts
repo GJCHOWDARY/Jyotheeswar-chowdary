@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpResponse } from '@angular/common/http';
 import {Observable} from 'rxjs';
-import { DealsComponent } from './deals.component'
+import { DealsComponent } from './deals.component';
 
 @Component({
   selector: 'app-result',

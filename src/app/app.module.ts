@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -24,6 +25,7 @@ import { SignupComponent } from './users/signup.component';
 import { AuthService } from  './users/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGaurd } from './users/auth.guard';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { AuthGaurd } from './users/auth.guard';
     //DealsComponent,
     UsersComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    ChartsComponent
     ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { AuthGaurd } from './users/auth.guard';
     RouterModule,
     AppRoutingModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [AuthService,AuthGaurd],
   bootstrap: [AppComponent]
