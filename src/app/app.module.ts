@@ -26,6 +26,7 @@ import { AuthService } from  './users/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGaurd } from './users/auth.guard';
 import { ChartsComponent } from './charts/charts.component';
+import { NewYearComponent } from './new-year/new-year.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ChartsComponent } from './charts/charts.component';
     UsersComponent,
     SignupComponent,
     ProfileComponent,
-    ChartsComponent
+    ChartsComponent,
+    NewYearComponent
     ],
   imports: [
     BrowserModule,
