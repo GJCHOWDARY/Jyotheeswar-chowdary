@@ -176,3 +176,74 @@ body {
     background: red; /* For browsers that do not support gradients */
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
 }
+/*.section{
+    /*background-color:  red;
+    background-size: cover;*/
+/*
+    width: 100%;
+    height:580px;
+    position: relative;
+    overflow: hidden;
+
+
+
+}*/
+.snow1{
+    background-repeat: repeat;
+     width: 100%;
+    height:580px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animateone 10s infinite linear;
+
+
+}
+@keyframes animateone {
+    0%{
+        background-position:  0px 0px;
+    }
+    100%{
+        background-position:  100px 580px;
+    }
+}
+.snow2{
+    background: url(https://up.harajgulf.com/do.php?img=3100581);
+
+    background-repeat: repeat;
+     width: 100%;
+    height:784px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animateTow 10s infinite linear;
+    background-size: 300px;
+}
+@keyframes animateTow {
+    0%{
+        background-position:  0px -100px;
+    }
+    100%{
+        background-position:  0px 580px;
+    }
+  }
+.snow3{
+    background: url(https://up.harajgulf.com/do.php?img=3100581);
+
+    background-repeat: repeat;
+     width: 100%;
+    height:1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animatethree 10s infinite linear;
+    background-size: 800px;
+}
+    @keyframes animatethree {
+    0%{
+        background-position:  0px 100px;
+    }
+    100%{
+        background-position:  300px 580px;
+    }
+  }
