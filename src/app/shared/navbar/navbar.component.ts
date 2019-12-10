@@ -42,7 +42,8 @@ export class NavbarComponent implements OnInit {
             toggleButton.classList.add('toggled');
         }, 500);
         html.classList.add('nav-open');
-
+            let element = document.getElementById('navbarToggler')
+            element.className = 'navbar-collapse';
         this.sidebarVisible = true;
     };
     sidebarClose() {

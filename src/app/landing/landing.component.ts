@@ -11,9 +11,7 @@ export class LandingComponent implements OnInit {
   hi='welcome';
   constructor( private http: HttpClient ) { }
 user= {};
-  ngOnInit() {
-this.http.get('https://shopaye.com/api/spaye_product_categories').subscribe(data => {this.user=data;
-console.log(data) })
+  ngOnInit() { 
   }
 
 }

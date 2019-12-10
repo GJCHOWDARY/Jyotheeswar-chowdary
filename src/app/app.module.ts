@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ChartsModule } from 'ng2-charts';
-
+import * as noUiSlider from 'nouislider';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
@@ -14,12 +14,10 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-
- import { HttpClientModule } from '@angular/common/http';
+import { MDBBootstrapModule, IconsModule } from 'angular-bootstrap-md';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
 import { ProjectComponent } from './project/project.component';
-import { ResultComponent } from './result/result.component';
-//import { DealsComponent } from './result/deals.component';
 import { UsersComponent } from './users/users.component';
 import { SignupComponent } from './users/signup.component';
 import { AuthService } from  './users/auth.service';
@@ -27,7 +25,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthGaurd } from './users/auth.guard';
 import { ChartsComponent } from './charts/charts.component';
 import { NewYearComponent } from './new-year/new-year.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +34,6 @@ import { NewYearComponent } from './new-year/new-year.component';
     NavbarComponent,
     FooterComponent,
     ProjectComponent,
-    ResultComponent,
-    //DealsComponent,
     UsersComponent,
     SignupComponent,
     ProfileComponent,
@@ -47,14 +42,14 @@ import { NewYearComponent } from './new-year/new-year.component';
     ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
+    NgbModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
   ],
   providers: [AuthService,AuthGaurd],
   bootstrap: [AppComponent]

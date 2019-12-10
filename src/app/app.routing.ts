@@ -9,7 +9,6 @@ import { ContactComponent } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { ProjectComponent } from './project/project.component';
-import { ResultComponent } from './result/result.component';
 import { UsersComponent } from './users/users.component';
 import { SignupComponent } from './users/signup.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -25,7 +24,6 @@ const routes: Routes =[
     { path: 'home',          component: LandingComponent},
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'project',      component: ProjectComponent },
-    { path: 'result',      component: ResultComponent },
     { path: 'login',      component: UsersComponent },
     { path: 'siginup',      component: SignupComponent },
     { path: 'charts',      component: ChartsComponent },

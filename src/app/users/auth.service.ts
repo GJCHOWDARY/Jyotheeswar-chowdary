@@ -1,9 +1,12 @@
 import { User } from './user.interface'
+import { Router } from "@angular/router";
 
 
 declare var firebase: any ;
 
 export class AuthService {
+  constructor( private router: Router ) { }
+
   signupUser(user:User){
     firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
     .catch(function(error) {

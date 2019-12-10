@@ -2,7 +2,7 @@ import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild } from '@ang
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HttpClient } from '@angular/common/http';
@@ -16,7 +16,7 @@ import { AuthService } from  './users/auth.service';
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
-    @ViewChild(NavbarComponent) navbar: NavbarComponent;
+    @ViewChild(NavbarComponent,{static:true}) navbar: NavbarComponent;
 
     constructor( private http: HttpClient,private renderer : Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location,private authService:AuthService) {}
 
@@ -51,33 +51,9 @@ export class AppComponent implements OnInit {
         if (version) {
             var body = document.getElementsByTagName('body')[0];
             body.classList.add('ie-background');
-
         }
-        //http request
-        this.http.get('https://api.github.com/users/gjchowdary').subscribe((data :Response) => {
-        const user=data;
-      console.log(data);
-    },
-      err => {
-        console.log("Error occured.")
-      });
-      //post method
-    //   const req = this.http.post('http://jsonplaceholder.typicode.com/posts', {
-    //   title: 'foo',
-    //   body: 'bar',
-    //   userId: 20
-    // })
-    //   .subscribe(
-    //     res => {
-    //       console.log(res);
-    //     },
-    //     err => {
-    //       console.log("Error occured");
-    //     }
-    //   );
-      //end
-
     }
+    
     isAuth(){
       this.authService.isAuthenticated();
     }

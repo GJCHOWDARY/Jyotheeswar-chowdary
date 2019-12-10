@@ -55,21 +55,18 @@
                 </li>
                 <li class="nav-item" *ngIf="isAuth()">
                     <a class="nav-link" rel="tooltip" title="login" data-placement="bottom" *ngIf="onLogin()" [routerLink]="['/login']">
-                        <i class="fa fa-github"></i>
-                        <p class="d-lg-none">CONTACT</p>
+                         <p class="d-lg-none">CONTACT</p>
                         SIGIN IN
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="isAuth()">
                     <a class="nav-link" rel="tooltip" title="login" data-placement="bottom" [routerLink]="['/profile']" >
-                        <i class="fa fa-github"></i>
                         <p class="d-lg-none">CONTACT</p>
                         PROFILE
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="isAuth()" >
                     <a class="nav-link" rel="tooltip" title="logout" data-placement="bottom" (click)="onLogout()"  >
-                        <i class="fa fa-github"></i>
                         <p class="d-lg-none">CONTACT</p>
                         LOGOUT
                     </a>
